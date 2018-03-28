@@ -56,7 +56,7 @@ trait CRM_HRCore_Upgrader_Steps_1000 {
       'defaultCurrency' => 'GBP',
       'dateformatDatetime' => '%d/%m/%Y %l:%M %P',
       'dateformatFull' => '%d/%m/%Y',
-      'dateformatFinancialBatch' => '%d/%m/%Y',
+      // 'dateformatFinancialBatch' => '%d/%m/%Y',
       'dateInputFormat' => 'dd/mm/yy',
       'lcMessages' => 'en_GB',
     ];
@@ -74,7 +74,6 @@ trait CRM_HRCore_Upgrader_Steps_1000 {
     civicrm_api3('Setting', 'create', $settings);
 
     $currenciesToEnable = [
-      ['GBP (£)','GBP', 1],
       ['EUR (€)','EUR', 0],
     ];
 
